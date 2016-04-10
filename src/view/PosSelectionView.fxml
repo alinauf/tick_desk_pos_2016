@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1384.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PosSelectionController">
+   <children>
+      <Region layoutX="-4.0" prefHeight="98.0" prefWidth="1388.0" style="-fx-background-color: #4DB6AC;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane fx:id="tablePane" layoutX="80.0" layoutY="118.0" prefHeight="672.0" prefWidth="549.0" style="-fx-background-color: blue;" AnchorPane.leftAnchor="80.0">
+         <children>
+            <TableView fx:id="tableView" layoutX="-1.0" layoutY="-3.0" prefHeight="676.0" prefWidth="550.0">
+              <columns>
+                <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantity" />
+                <TableColumn fx:id="productColumn" minWidth="1.0" prefWidth="300.0" text="Product" />
+                  <TableColumn fx:id="priceColumn" prefWidth="150.0" text="Price" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children></Pane>
+      <VBox fx:id="buttonVBox" layoutX="632.0" layoutY="99.0" prefHeight="807.0" prefWidth="251.0" spacing="30.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="632.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 12; -fx-font-family: Gills San; -fx-font-weight: bold; -fx-background-color: #FFD54F;" text="Breakfast">
+               <font>
+                  <Font name="Apple Chancery" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 12; -fx-font-family: Gills San; -fx-font-weight: bold; -fx-background-color: #FFD54F;" text="Soup">
+               <font>
+                  <Font name="Apple Chancery" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="37.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 12; -fx-font-family: Gills San; -fx-font-weight: bold; -fx-background-color: #FFD54F;" text="Wraps">
+               <font>
+                  <Font name="Apple Chancery" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="64.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 12; -fx-font-family: Gills San; -fx-font-weight: bold; -fx-background-color: #FFD54F;" text="Sandwiches">
+               <font>
+                  <Font name="Apple Chancery" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="91.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 12; -fx-font-family: Gills San; -fx-font-weight: bold; -fx-background-color: #FFD54F;" text="Salads">
+               <font>
+                  <Font name="Apple Chancery" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="118.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 12; -fx-font-family: Gills San; -fx-font-weight: bold; -fx-background-color: #FFD54F;" text="Deserts">
+               <font>
+                  <Font name="Apple Chancery" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="145.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 12; -fx-font-family: Gills San; -fx-font-weight: bold; -fx-background-color: #FFD54F;" text="Beverages">
+               <font>
+                  <Font name="Apple Chancery" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="204.0" style="-fx-background-color: #00E676;" text="Settle" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="50.0" right="20.0" top="20.0" />
+         </padding></VBox>
+      <Pane fx:id="listViewPane" layoutX="895.0" layoutY="106.0" prefHeight="681.0" prefWidth="430.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="895.0" AnchorPane.rightAnchor="59.0">
+         <children>
+            <ListView fx:id="subCatList" fixedCellSize="-5.0" layoutX="1.0" layoutY="9.0" onMousePressed="#subCatOnClick" prefHeight="681.0" prefWidth="430.0" />
+         </children>
+      </Pane>
+      <Label layoutX="74.0" layoutY="25.0" text="TickDesk">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="21.0" style="-fx-text-fill: white;" text="POS">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="808.0" prefHeight="39.0" prefWidth="120.0" style="-fx-text-fill: #F4511E;" text="Total:">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="557.0" layoutY="805.0" prefHeight="31.0" prefWidth="74.0" style="-fx-text-fill: #F4511E;" text="price">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
